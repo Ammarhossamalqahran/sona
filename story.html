@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>حكاية حسناء ❤️</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap"
+          rel="stylesheet">
+
+
+<style>
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    background:
+        radial-gradient(
+            circle at 20% 10%,
+            rgba(255, 45, 100, .12),
+            transparent 30%
+        ),
+        #070207;
+
+    color: white;
+
+    font-family: "Cairo", sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* ==================================================
+   FLOATING HEARTS
+================================================== */
+
+#hearts {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 50;
+}
+
+.heart {
+
+    position: absolute;
+
+    bottom: -30px;
+
+    color: #ff6d96;
+
+    opacity: 0;
+
+    animation:
+        rise linear forwards;
+}
+
+
+/* ==================================================
+   NAV
+================================================== */
+
+.nav {
+
+    position: fixed;
+
+    top: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 100;
+
+    padding: 9px 18px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    border-radius: 50px;
+
+    background:
+        rgba(10,5,9,.55);
+
+    backdrop-filter: blur(15px);
+
+    color: #e8cbd4;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 100px 20px 60px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+
+    height: 600px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,40,100,.18),
+            transparent 68%
+        );
+
+    animation:
+        pulse 5s infinite;
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+}
+
+
+.eyebrow {
+
+    color: #dca9b8;
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h1 {
+
+    font-family: "Amiri", serif;
+
+    font-size:
+        clamp(75px, 17vw, 170px);
+
+    font-weight: 400;
+
+    line-height: .85;
+
+    background:
+        linear-gradient(
+            120deg,
+            white,
+            #ffd3df,
+            #ff477a
+        );
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+
+    animation:
+        titleIn 1.5s ease both;
+}
+
+
+.hero-sub {
+
+    margin-top: 35px;
+
+    color: #e7d7dc;
+
+    font-family: "Amiri", serif;
+
+    font-size:
+        clamp(20px, 3vw, 30px);
+
+    line-height: 1.8;
+}
+
+
+.scroll {
+
+    margin-top: 50px;
+
+    color: #9f7f89;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    animation:
+        float 2s infinite;
+}
+
+
+/* ==================================================
+   COMMON
+================================================== */
+
+section {
+
+    padding:
+        110px
+        7%;
+}
+
+
+.container {
+
+    max-width: 1050px;
+
+    margin: auto;
+}
+
+
+.section-label {
+
+    color: #ff7097;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    text-align: center;
+
+    margin-bottom: 10px;
+}
+
+
+.section-title {
+
+    font-family: "Amiri", serif;
+
+    font-size:
+        clamp(42px, 7vw, 70px);
+
+    font-weight: 400;
+
+    text-align: center;
+
+    color: #ffe8ee;
+
+    margin-bottom: 55px;
+}
+
+
+/* ==================================================
+   PHOTO
+================================================== */
+
+.photo-section {
+
+    text-align: center;
+}
+
+
+.photo-frame {
+
+    position: relative;
+
+    max-width: 760px;
+
+    margin: auto;
+
+    padding: 9px;
+
+    border-radius: 32px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.22),
+            rgba(255,55,110,.35),
+            rgba(255,255,255,.05)
+        );
+
+    box-shadow:
+        0 40px 100px
+        rgba(0,0,0,.65),
+
+        0 0 70px
+        rgba(255,40,100,.13);
+}
+
+
+.photo-frame img {
+
+    display: block;
+
+    width: 100%;
+
+    max-height: 780px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+}
+
+
+.photo-caption {
+
+    font-family: "Amiri", serif;
+
+    color: #dcbcc5;
+
+    font-size: 24px;
+
+    margin-top: 25px;
+}
+
+
+/* ==================================================
+   BIRTHDAY
+================================================== */
+
+.birthday {
+
+    text-align: center;
+
+    padding-top: 60px;
+}
+
+
+.birthday-card {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 45px 25px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.1);
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.055),
+            rgba(255,30,90,.06)
+        );
+
+    backdrop-filter: blur(15px);
+}
+
+
+.birthday-date {
+
+    font-family: "Amiri", serif;
+
+    font-size:
+        clamp(45px, 8vw, 80px);
+
+    color: #ff759b;
+
+    line-height: 1;
+}
+
+
+.birthday-text {
+
+    margin-top: 20px;
+
+    color: #e5d5da;
+
+    font-family: "Amiri", serif;
+
+    font-size: 24px;
+
+    line-height: 1.8;
+}
+
+
+/* ==================================================
+   STORY TIMELINE
+================================================== */
+
+.timeline {
+
+    position: relative;
+
+    max-width: 800px;
+
+    margin: auto;
+}
+
+
+.timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    bottom: 0;
+
+    right: 50%;
+
+    width: 1px;
+
+    background:
+        linear-gradient(
+            transparent,
+            #ff648c,
+            transparent
+        );
+}
+
+
+.story-item {
+
+    width: 50%;
+
+    padding: 25px;
+
+    position: relative;
+}
+
+
+.story-item:nth-child(odd) {
+
+    margin-left: 50%;
+
+    text-align: right;
+}
+
+
+.story-item:nth-child(even) {
+
+    text-align: left;
+}
+
+
+.story-dot {
+
+    position: absolute;
+
+    top: 35px;
+
+    width: 12px;
+
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: #ff6d95;
+
+    box-shadow:
+        0 0 20px
+        rgba(255,50,100,.7);
+}
+
+
+.story-item:nth-child(odd)
+.story-dot {
+
+    right: -6px;
+}
+
+
+.story-item:nth-child(even)
+.story-dot {
+
+    left: -6px;
+}
+
+
+.story-box {
+
+    padding: 25px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    border-radius: 22px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    transition: .35s;
+}
+
+
+.story-box:hover {
+
+    transform:
+        translateY(-5px);
+
+    background:
+        rgba(255,40,100,.07);
+
+    border-color:
+        rgba(255,100,140,.25);
+}
+
+
+.story-box h3 {
+
+    font-family: "Amiri", serif;
+
+    color: #ff7b9e;
+
+    font-size: 27px;
+
+    margin-bottom: 10px;
+}
+
+
+.story-box p {
+
+    color: #cdbec3;
+
+    line-height: 2;
+
+    font-size: 15px;
+}
+
+
+/* ==================================================
+   POEM
+================================================== */
+
+.poem-section {
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.poem {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    text-align: center;
+
+    font-family: "Amiri", serif;
+
+    font-size:
+        clamp(24px, 4vw, 34px);
+
+    line-height: 2.2;
+
+    color: #f5e7eb;
+}
+
+
+.poem .pink {
+
+    color: #ff7098;
+}
+
+
+/* ==================================================
+   LETTER
+================================================== */
+
+.letter {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding:
+        clamp(30px, 6vw, 60px);
+
+    border-radius: 35px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.065),
+            rgba(255,20,80,.045)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.11);
+
+    box-shadow:
+        0 40px 100px
+        rgba(0,0,0,.35);
+}
+
+
+.letter-top {
+
+    text-align: center;
+
+    font-family: "Amiri", serif;
+
+    font-size: 40px;
+
+    color: #ff759a;
+
+    margin-bottom: 35px;
+}
+
+
+.letter p {
+
+    color: #e1d4d9;
+
+    font-size: 17px;
+
+    line-height: 2.35;
+
+    margin-bottom: 25px;
+}
+
+
+.letter strong {
+
+    color: #ff789c;
+}
+
+
+.signature {
+
+    text-align: left;
+
+    font-family: "Amiri", serif;
+
+    color: #ff7599;
+
+    font-size: 28px;
+
+    margin-top: 45px;
+}
+
+
+/* ==================================================
+   FINAL
+================================================== */
+
+.final {
+
+    min-height: 90vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+}
+
+
+.final-content {
+
+    max-width: 800px;
+}
+
+
+.final h2 {
+
+    font-family: "Amiri", serif;
+
+    font-size:
+        clamp(55px, 10vw, 110px);
+
+    font-weight: 400;
+
+    color: #ff7098;
+
+    text-shadow:
+        0 0 50px
+        rgba(255,50,100,.18);
+}
+
+
+.final p {
+
+    margin-top: 20px;
+
+    font-family: "Amiri", serif;
+
+    font-size: 25px;
+
+    color: #dfcdd3;
+
+    line-height: 2;
+}
+
+
+.final-heart {
+
+    font-size: 75px;
+
+    margin-top: 30px;
+
+    animation:
+        heartbeat 1.3s infinite;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+
+    text-align: center;
+
+    padding:
+        35px 20px 50px;
+
+    color: #705963;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+
+/* ==================================================
+   ANIMATIONS
+================================================== */
+
+@keyframes titleIn {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(35px)
+            scale(.92);
+
+        filter: blur(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+        filter: none;
+    }
+}
+
+
+@keyframes pulse {
+
+    50% {
+        transform: scale(1.15);
+        opacity: .7;
+    }
+}
+
+
+@keyframes float {
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+@keyframes rise {
+
+    0% {
+
+        transform:
+            translateY(10vh)
+            scale(.4)
+            rotate(0);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: .5;
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            scale(1.2)
+            rotate(180deg);
+
+        opacity: 0;
+    }
+}
+
+
+@keyframes heartbeat {
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media(max-width:700px) {
+
+    section {
+        padding:
+            80px 20px;
+    }
+
+
+    .timeline::before {
+        right: 10px;
+    }
+
+
+    .story-item,
+    .story-item:nth-child(odd),
+    .story-item:nth-child(even) {
+
+        width: 100%;
+
+        margin: 0;
+
+        padding:
+            20px 35px 20px 0;
+
+        text-align: right;
+    }
+
+
+    .story-item .story-dot,
+    .story-item:nth-child(odd) .story-dot,
+    .story-item:nth-child(even) .story-dot {
+
+        right: 4px;
+
+        left: auto;
+    }
+
+
+    .letter p {
+
+        font-size: 16px;
+
+        line-height: 2.15;
+    }
+
+
+    .photo-frame img {
+
+        max-height: 600px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     NAV
+================================================== -->
+
+<div class="nav">
+
+    HOSNAA • A LITTLE STORY ❤️
+
+</div>
+
+
+
+<!-- ==================================================
+     HEARTS
+================================================== -->
+
+<div id="hearts"></div>
+
+
+
+<!-- ==================================================
+     HERO
+================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+
+            THIS IS FOR YOU
+
+        </div>
+
+
+        <h1>
+
+            حسناء
+
+        </h1>
+
+
+        <div class="hero-sub">
+
+            مش كل الحكايات بتبدأ بكلمة...
+            <br>
+
+            في حكايات بتبدأ بإحساس.
+
+        </div>
+
+
+        <div class="scroll">
+
+            ↓ انزلي بهدوء ↓
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PHOTO
+================================================== -->
+
+<section class="photo-section">
+
+    <div class="container">
+
+        <div class="section-label">
+
+            HER PHOTO
+
+        </div>
+
+
+        <h2 class="section-title">
+
+            هي... حسناء ❤️
+
+        </h2>
+
+
+        <div class="photo-frame">
+
+            <img
+                src="hosnaa.jpg"
+                alt="حسناء">
+
+        </div>
+
+
+        <div class="photo-caption">
+
+            صورة واحدة...
+            بس وراها مشاعر كتير.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     BIRTHDAY
+================================================== -->
+
+<section class="birthday">
+
+    <div class="container">
+
+        <div class="section-label">
+
+            THE DAY SHE WAS BORN
+
+        </div>
+
+
+        <h2 class="section-title">
+
+            يوم مميز جدًا
+
+        </h2>
+
+
+        <div class="birthday-card">
+
+            <div class="birthday-date">
+
+                18 • 07 • 2009
+
+            </div>
+
+
+            <div class="birthday-text">
+
+                اليوم اللي بدأت فيه حكاية
+                <br>
+
+                <strong style="color:#ff759a">
+                    حسناء
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     TIMELINE
+================================================== -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-label">
+
+            OUR LITTLE STORY
+
+        </div>
+
+
+        <h2 class="section-title">
+
+            من البداية...
+
+        </h2>
+
+
+        <div class="timeline">
+
+
+            <div class="story-item">
+
+                <div class="story-dot"></div>
+
+                <div class="story-box">
+
+                    <h3>
+                        البداية
+                    </h3>
+
+                    <p>
+
+                        في البداية كان الموضوع مجرد مساعدة،
+                        ومكنتش أعرف إن الشخص اللي بساعده
+                        ممكن يبقى له مكان بالشكل ده في قلبي.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="story-item">
+
+                <div class="story-dot"></div>
+
+                <div class="story-box">
+
+                    <h3>
+                        وبعدين...
+                    </h3>
+
+                    <p>
+
+                        الأيام عدّت،
+                        والكلام زاد،
+                        والاهتمام بقى أكبر من مجرد سؤال عابر:
+                        "إنتِ كويسة؟"
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="story-item">
+
+                <div class="story-dot"></div>
+
+                <div class="story-box">
+
+                    <h3>
+                        أصعب وقت
+                    </h3>
+
+                    <p>
+
+                        ولما جيه وقت صعب عليكي،
+                        كل اللي كان فارق معايا إنك تكوني بخير،
+                        وإن ربنا يحفظك ويقومك بالسلامة.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="story-item">
+
+                <div class="story-dot"></div>
+
+                <div class="story-box">
+
+                    <h3>
+                        ولسه...
+                    </h3>
+
+                    <p>
+
+                        الحكاية لسه مفتوحة،
+                        ولسه في كلام كتير نفسي أقوله،
+                        ولسه في حاجات أجمل مستنيينها.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     POEM
+================================================== -->
+
+<section class="poem-section">
+
+    <div class="container">
+
+        <div class="section-label">
+
+            A FEW WORDS
+
+        </div>
+
+
+        <h2 class="section-title">
+
+            إلى حسناء 🌙
+
+        </h2>
+
+
+        <div class="poem">
+
+            يا <span class="pink">حسناء</span> يا اسمًا
+            إذا نطقتهُ
+
+            <br>
+
+            صار الكلامُ من الجمالِ حكاية
+
+            <br><br>
+
+            في يومِ مولدكِ
+            بدأت حكايةٌ
+
+            <br>
+
+            لم أعرف يومًا
+            أنها ستبقى في قلبي
+
+            <br><br>
+
+            وإن ضاقت الدنيا عليكِ لحظةً
+
+            <br>
+
+            هتلاقي حد نفسه يشوفكِ
+            <span class="pink">بخير</span>
+
+            <br><br>
+
+            وإن سألتِ القلب يومًا
+            من أحب؟
+
+            <br>
+
+            سيقول:
+
+            <br>
+
+            <span class="pink">
+                حسناء... ❤️
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     LETTER
+================================================== -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-label">
+
+            FROM MY HEART
+
+        </div>
+
+
+        <h2 class="section-title">
+
+            رسالة ليكي ❤️
+
+        </h2>
+
+
+        <div class="letter">
+
+            <div class="letter-top">
+
+                حسناء...
+
+            </div>
+
+
+            <p>
+
+                مش عارف أبدأ الرسالة دي منين،
+                لأن مهما كتبت مش هعرف أوصف
+                كل اللي جوايا.
+
+            </p>
+
+
+            <p>
+
+                في البداية كنت بساعدك وبس،
+                ومكنتش متخيل إن الوقت هيخليني
+                أهتم بيكي بالشكل ده.
+
+            </p>
+
+
+            <p>
+
+                لكن مع الوقت بقيتي حد غالي،
+                وبقى يفرق معايا جدًا أعرف إنك بخير،
+                وأشوفك مبسوطة ومطمنة.
+
+            </p>
+
+
+            <p>
+
+                ولما مريتي بوقت صعب،
+                حسيت قد إيه الإنسان ممكن يتمنى
+                حاجة واحدة بس:
+
+                <strong>
+                    إن الشخص اللي بيحبه يكون بخير.
+                </strong>
+
+            </p>
+
+
+            <p>
+
+                يمكن أنا مش دايمًا بعرف أقول
+                اللي جوايا بالطريقة الصح،
+                ويمكن الكلام ساعات بيخوني...
+
+                لكن إحساسي ناحيتك حقيقي.
+
+            </p>
+
+
+            <p>
+
+                أنا بحبك يا حسناء،
+                وبحب وجودك،
+                وبحب إنك إنتِ زي ما إنتِ،
+                من غير ما تتغيري عشان حد.
+
+            </p>
+
+
+            <p>
+
+                وكل اللي أتمناه ليكي
+                إن أيامك الجاية تكون أهدى،
+                وأجمل،
+                ومليانة ضحك وفرحة.
+
+            </p>
+
+
+            <p>
+
+                وربنا يديم عليكي نعمة الصحة
+                والراحة،
+                ويبعد عنك أي وجع.
+
+            </p>
+
+
+            <div class="signature">
+
+                من قلبي ليكي... ❤️
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     FINAL
+================================================== -->
+
+<section class="final">
+
+    <div class="final-content">
+
+        <div class="section-label">
+
+            ONE LAST THING
+
+        </div>
+
+
+        <h2>
+
+            حسناء
+
+        </h2>
+
+
+        <p>
+
+            لو الأيام اتغيرت...
+
+            <br>
+
+            في حاجات عمرها ما هتتغير.
+
+        </p>
+
+
+        <div class="final-heart">
+
+            ❤️
+
+        </div>
+
+
+        <p>
+
+            وجودك في قلبي واحدة منها.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+    MADE WITH LOVE FOR HOSNAA ❤️
+
+    <br><br>
+
+    18 • 07 • 2009
+
+</footer>
+
+
+
+<script>
+
+
+/* ==================================================
+   FLOATING HEARTS
+================================================== */
+
+const hearts =
+    document.getElementById("hearts");
+
+
+const symbols = [
+    "♥",
+    "♡",
+    "✦",
+    "❤",
+    "•"
+];
+
+
+function createHeart() {
+
+    const heart =
+        document.createElement("div");
+
+
+    heart.className =
+        "heart";
+
+
+    heart.innerText =
+        symbols[
+            Math.floor(
+                Math.random()
+                * symbols.length
+            )
+        ];
+
+
+    heart.style.left =
+        Math.random()
+        * 100
+        + "vw";
+
+
+    heart.style.fontSize =
+        (10 + Math.random() * 18)
+        + "px";
+
+
+    heart.style.animationDuration =
+        (5 + Math.random() * 8)
+        + "s";
+
+
+    hearts.appendChild(
+        heart
+    );
+
+
+    setTimeout(
+        () => heart.remove(),
+        14000
+    );
+
+}
+
+
+setInterval(
+    createHeart,
+    500
+);
+
+
+/* ==================================================
+   SMALL PARALLAX EFFECT
+================================================== */
+
+document.addEventListener(
+    "mousemove",
+    function(e) {
+
+        const x =
+            (e.clientX / window.innerWidth - .5);
+
+        const y =
+            (e.clientY / window.innerHeight - .5);
+
+        document.body.style.backgroundPosition =
+            `${x * 8}px ${y * 8}px`;
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
